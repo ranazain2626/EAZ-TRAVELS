@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Settings"
+            android:textColor="#535353"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    app:cardCornerRadius="80dp">
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/dpp" />
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:tint="#2059EC"
+                    android:translationZ="100dp"
+                    app:srcCompat="@android:drawable/ic_menu_camera" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="50dp"
+                    app:cardCornerRadius="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="#2059EC">
+
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerInParent="true"
+                            android:tint="@color/white"
+                            app:srcCompat="@drawable/ic_baseline_person_24" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/editTextTextEmailAddress3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|center_horizontal|fill_horizontal"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginLeft="80dp"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:hint="Last Name"
+                        android:inputType="textEmailAddress" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="50dp"
+                    app:cardCornerRadius="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="#2059EC">
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerInParent="true"
+                            app:srcCompat="@drawable/mdi_email_multiple" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/editTextTextEmailAddress3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|center_horizontal|fill_horizontal"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginLeft="80dp"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:hint="Email Address"
+                        android:inputType="textEmailAddress" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="50dp"
+                    app:cardCornerRadius="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="#2059EC">
+
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerInParent="true"
+                            android:tint="@color/white"
+                            app:srcCompat="@drawable/ic_baseline_person_24" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/editTextTextEmailAddress3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|center_horizontal|fill_horizontal"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginLeft="80dp"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:hint="First Name"
+                        android:inputType="textEmailAddress" />
+
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/btn_login"
+                    android:text="Update Profile"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
