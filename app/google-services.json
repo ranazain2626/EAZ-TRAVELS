@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "193215850614",
+    "project_id": "eaz-travels",
+    "storage_bucket": "eaz-travels.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:193215850614:android:01ee4a1da404c8fc5dd757",
+        "android_client_info": {
+          "package_name": "com.example.eaztravels"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "193215850614-o07a3fld2gioqgr3pr8vg9adthq9c9rr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmIUG_61sPbcPeLM3Hm6ihFXnXqqe2KDk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "193215850614-o07a3fld2gioqgr3pr8vg9adthq9c9rr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
