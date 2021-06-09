@@ -24,7 +24,8 @@
             android:gravity="center"
             android:text="Chat"
             android:textColor="#535353"
-            android:textSize="16sp" />
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

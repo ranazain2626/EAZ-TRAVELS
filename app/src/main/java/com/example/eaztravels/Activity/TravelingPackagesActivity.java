@@ -12,15 +12,26 @@ import com.example.eaztravels.R;
 
 public class TravelingPackagesActivity extends AppCompatActivity {
 
+    int done=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_traveling_pakges);
 
+        done=getIntent().getIntExtra("done",0);
+
         RecyclerView rv= (RecyclerView) findViewById(R.id.rv);
         rv.setLayoutManager(new LinearLayoutManager(this));
-        String data[]={"1","1","12"};
-        PackagesAdapter adapter=new PackagesAdapter(this,data);
-        rv.setAdapter(adapter);
+        if(done==1) {
+            String data[] = {"1"};
+            PackagesAdapter adapter = new PackagesAdapter(this, data, done);
+            rv.setAdapter(adapter);
+        }
+        else {
+            String data[] = {"1", "1", "12"};
+            PackagesAdapter adapter = new PackagesAdapter(this, data, done);
+            rv.setAdapter(adapter);
+        }
+
     }
 }

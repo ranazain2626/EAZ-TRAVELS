@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.eaztravels.Base.BaseActivity;
 import com.example.eaztravels.Fragments.BookingFragment;
 import com.example.eaztravels.Fragments.ChatFragment;
 import com.example.eaztravels.Fragments.HomeFragment;
@@ -14,7 +15,7 @@ import com.example.eaztravels.Fragments.SettingFragment;
 import com.example.eaztravels.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".Activity.ConfrimPackage"></activity>
+        <activity android:name=".Activity.PackageDetailsActivity"></activity>
         <activity android:name=".Activity.TravelingPackagesActivity" />
+        <activity android:name=".Activity.SpecialRequestFormActivity" />
         <activity android:name=".Activity.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +21,7 @@
         </activity>
         <activity android:name=".Activity.LoginActivity" />
         <activity android:name=".Activity.SginUpActivity" />
+        <activity android:name=".Activity.BookingFormActivity" />
         <activity android:name=".Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

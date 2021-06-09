@@ -27,19 +27,23 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
-        android:text="Where would you like to go ?" />
+        android:text="Where would you like to go ?"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="20dp"
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/usa_card"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="20dp"
@@ -50,6 +54,8 @@
                 android:id="@+id/imageView16"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:tint="#41000000"
                 app:srcCompat="@drawable/usa" />
 
             <TextView
@@ -64,6 +70,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/international_card"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="20dp"
@@ -75,6 +82,8 @@
                 android:id="@+id/imageView17"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:tint="#2B000000"
                 app:srcCompat="@drawable/international" />
 
             <TextView
@@ -89,6 +98,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/request_card"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="20dp"
@@ -99,6 +109,8 @@
                 android:id="@+id/imageView18"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:tint="#41000000"
                 app:srcCompat="@drawable/sepacial" />
 
             <TextView
@@ -108,7 +120,7 @@
                 android:layout_gravity="center"
                 android:text="Special Request"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp"
+                android:textSize="26sp"
                 android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
 

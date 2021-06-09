@@ -10,20 +10,24 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Settings"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Profile"
             android:textColor="#535353"
-            android:textSize="16sp" />
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
     </LinearLayout>
 
     <ScrollView
@@ -39,7 +43,7 @@
                 android:layout_width="140dp"
                 android:layout_height="140dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="40dp">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="140dp"
@@ -68,6 +72,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:orientation="vertical">
 
                 <androidx.cardview.widget.CardView

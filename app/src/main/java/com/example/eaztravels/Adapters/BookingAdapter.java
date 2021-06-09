@@ -5,8 +5,12 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.eaztravels.Activity.MainActivity;
@@ -27,12 +31,7 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.BookingV
     public BookingViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.row_booking,parent,false);
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((MainActivity) ctx).startActivity(new Intent(ctx, TravelingPackagesActivity.class));
-            }
-        });
+
         return new BookingViewHolder(view);
 
 
@@ -41,7 +40,41 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.BookingV
     @Override
     public void onBindViewHolder(@NonNull BookingViewHolder holder, int position) {
 //        MatchesModel title = data[position];
-//        holder.team1.setText(title.getHomeTeamName());
+           holder.title.setText("Request # "+(position+1));
+           if(position==0)
+           {
+               holder.status.setBackgroundResource(R.drawable.btn_inital);
+               holder.status.setText("Pending");
+               holder.card.setOnClickListener(new View.OnClickListener() {
+                   @Override
+                   public void onClick(View v) {
+                       ((MainActivity) ctx).showMessage("This request is pending currently! Our operator will contact you shortly");
+
+                   }
+               });
+           }else if(position==1)
+           {
+               holder.status.setBackgroundResource(R.drawable.btn_secondary);
+               holder.status.setText("Packages Offered");
+               holder.card.setOnClickListener(new View.OnClickListener() {
+                   @Override
+                   public void onClick(View v) {
+                       ((MainActivity) ctx).startActivity(new Intent(ctx, TravelingPackagesActivity.class));
+                   }
+               });
+           }else if(position==2)
+           {
+               holder.status.setBackgroundResource(R.drawable.btn_green);
+               holder.status.setText("Package Confirmed");
+               holder.card.setOnClickListener(new View.OnClickListener() {
+                   @Override
+                   public void onClick(View v) {
+                       Intent intent=new Intent(ctx, TravelingPackagesActivity.class);
+                       intent.putExtra("done",1);
+                       ((MainActivity) ctx).startActivity(intent);
+                   }
+               });
+           }
 //        holder.team2.setText(title.getAwayTeamName());
 //        holder.src.setText(title.getScore());
 
@@ -56,13 +89,15 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.BookingV
 
     public class BookingViewHolder extends RecyclerView.ViewHolder{
         //ImageView img;
-     //   TextView team1,team2,src;
+       TextView title;
+       Button status;
+       CardView card;
 
         public BookingViewHolder(@NonNull View itemView) {
             super(itemView);
-//            team1=  itemView.findViewById(R.id.team1);
-//            team2=  itemView.findViewById(R.id.team2);
-//            src= itemView.findViewById(R.id.src);
+            title=  itemView.findViewById(R.id.title);
+            status=  itemView.findViewById(R.id.status);
+            card= itemView.findViewById(R.id.card);
 
         }
     }

@@ -5,12 +5,14 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.eaztravels.Activity.BookingFormActivity;
-import com.example.eaztravels.Activity.ConfrimPackage;
+import com.example.eaztravels.Activity.PackageDetailsActivity;
 import com.example.eaztravels.Activity.MainActivity;
 import com.example.eaztravels.Activity.TravelingPackagesActivity;
 import com.example.eaztravels.R;
@@ -18,10 +20,12 @@ import com.example.eaztravels.R;
 public class PackagesAdapter extends RecyclerView.Adapter<PackagesAdapter.PackageViewHolder> {
     private String[] data;
     Context ctx;
+    int done;
 
-    public PackagesAdapter(Context activity,String[] arrl) {
+    public PackagesAdapter(Context activity,String[] arrl,int done) {
         this.data=arrl;
         this.ctx=activity;
+        this.done=done;
     }
 
     @NonNull
@@ -32,7 +36,9 @@ public class PackagesAdapter extends RecyclerView.Adapter<PackagesAdapter.Packag
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MainActivity) ctx).startActivity(new Intent(ctx,ConfrimPackage.class));
+                Intent intent=new Intent(ctx, PackageDetailsActivity.class);
+                intent.putExtra("done",done);
+                ((TravelingPackagesActivity) ctx).startActivity(intent);
             }
         });
         return new PackageViewHolder(view);
@@ -47,6 +53,23 @@ public class PackagesAdapter extends RecyclerView.Adapter<PackagesAdapter.Packag
 //        holder.team2.setText(title.getAwayTeamName());
 //        holder.src.setText(title.getScore());
 
+        holder.title.setText("Itinerary # "+(position+1));
+        if(position==0)
+        {
+            if(done==1)
+            {
+                holder.done_layout.setVisibility(View.VISIBLE);
+            }else{
+                holder.done_layout.setVisibility(View.GONE);
+            }
+            holder.img.setImageDrawable(ctx.getResources().getDrawable(R.drawable.itnerary2));
+        }else  if(position==1)
+        {
+            holder.img.setImageDrawable(ctx.getResources().getDrawable(R.drawable.itenraray3));
+        }else  if(position==2)
+        {
+            holder.img.setImageDrawable(ctx.getResources().getDrawable(R.drawable.itinerary1));
+        }
 
     }
 
@@ -57,14 +80,16 @@ public class PackagesAdapter extends RecyclerView.Adapter<PackagesAdapter.Packag
 
 
     public class PackageViewHolder extends RecyclerView.ViewHolder{
-        //ImageView img;
-        //   TextView team1,team2,src;
+            ImageView img;
+           TextView title;
+           FrameLayout done_layout;
 
         public PackageViewHolder(@NonNull View itemView) {
             super(itemView);
-//            team1=  itemView.findViewById(R.id.team1);
-//            team2=  itemView.findViewById(R.id.team2);
-//            src= itemView.findViewById(R.id.src);
+            title=  itemView.findViewById(R.id.title);
+            img= itemView.findViewById(R.id.image);
+            done_layout= itemView.findViewById(R.id.done_layout);
+
 
         }
     }

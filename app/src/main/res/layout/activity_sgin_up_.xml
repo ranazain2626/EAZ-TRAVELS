@@ -106,6 +106,43 @@
             android:background="#27C5E3">
 
             <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                app:srcCompat="@android:drawable/stat_sys_phone_call" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|center_horizontal|fill_horizontal"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="Phone #"
+            android:inputType="textEmailAddress" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        app:cardCornerRadius="5dp">
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#27C5E3">
+
+            <ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
