@@ -100,7 +100,7 @@
                     </RelativeLayout>
 
                     <EditText
-                        android:id="@+id/editTextTextEmailAddress3"
+                        android:id="@+id/email_address"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center|center_horizontal|fill_horizontal"
@@ -137,7 +137,7 @@
                     </RelativeLayout>
 
                     <EditText
-                        android:id="@+id/editTextTextEmailAddress3"
+                        android:id="@+id/email_address"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center|center_horizontal|fill_horizontal"
@@ -175,7 +175,7 @@
                     </RelativeLayout>
 
                     <EditText
-                        android:id="@+id/editTextTextEmailAddress3"
+                        android:id="@+id/email_address"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center|center_horizontal|fill_horizontal"
